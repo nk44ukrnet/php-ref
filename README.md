@@ -30,3 +30,35 @@ if (isset($_FILES['file'])) {
     }
 }
 ```
+
+___working with filesystem___
+
+```
+// Magic constants
+//__FILE__ - filename + path
+//__DIR__ + path
+
+// Create directory
+//mkdir('test');
+
+// Rename directory
+//rename('test', 'test1');
+
+// Delete directory
+//rmdir('test1');
+
+// Read files and folders inside directory
+//scandir('./'); //returns array
+
+// file_get_contents, file_put_contents
+//$text = file_get_contents('lorem.txt');
+//file_put_contents('lorem.txt', 'My content' . PHP_EOL . $text);
+
+// https://www.php.net/manual/en/book.filesystem.php
+// file_exists
+// is_dir
+// filemtime
+// filesize
+// disk_free_space
+// file
+```
