@@ -24,7 +24,8 @@ if (isset($_FILES['file'])) {
         $errorMessage = 'You can not upload files greater than 5 MB';
     } elseif (!in_array($ext, $allowedExtensions)) {
         $errorMessage = 'You can only upload Images';
-    }
+    } else {
     move_uploaded_file($_FILES['file']['tmp_name'], './uploads/_' . time() . '_' . rand(1, 50000) . '_' . $_FILES['file']['name']);
+    }
 }
 ```
