@@ -17,6 +17,7 @@ if (isset($_FILES['file'])) {
     $file = $_FILES['file'];
 
     $ext = pathinfo($file['name'], PATHINFO_EXTENSION);
+    $ext = strtolower($ext);
 
     $allowedExtensions = ['jpg', 'png', 'gif'];
 
